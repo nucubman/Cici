@@ -1,0 +1,49 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <stdlib.h> 
+#include <conio.h>
+#include <time.h>
+int isprime(int number) {
+	int k = 2;
+	int i = 1;
+
+	while (k <= number / 2) {
+		if (number % k == 0) {
+			i = 0;
+			break;
+		}
+		k++;
+	}
+
+	return i;
+}
+
+main()
+{
+	int m[100];
+	int i = 0;
+	while (i < 100) {
+		int r = rand() % 100;
+		printf("%02d ", r);
+		int p = isprime(r);
+
+		if (isprime(r + 3) == 1 && r % 7 == 0) {
+
+			m[i] = r;
+			i++;
+		}
+		
+		
+	}
+
+	printf("\n\n");
+
+	for (int i = 0; i < 100; i++) {
+		printf("%02d ", m[i]);
+	}
+
+	printf("\n");
+	getchar();
+}
+
+*shevaset masivi shemxtveviti ricxvebit sadac es shemtxveviti ricvcxvi aris 7 is jeradi da am ricxvs damatebuli 3 aris martivi ricxvi*/
